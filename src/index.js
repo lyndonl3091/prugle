@@ -8,12 +8,15 @@ import createSagaMiddleware from 'redux-saga'
 
 import App from './App'
 import SignUp from './components/auth/SignUp'
-import reducers from './reducers';
+import reducers from './reducers'
+import sagas from './sagas'
 import { toHome, toLogin, toSignUp } from './routePaths'
 
 const sagaMiddleware = createSagaMiddleware()
 
 const createStoreWithMiddleware = applyMiddleware(sagaMiddleware)(createStore);
+
+sagaMiddleware.run(sagas)
 
 ReactDOM.render(
   <MuiThemeProvider>
