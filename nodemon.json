@@ -1,0 +1,9 @@
+{
+    "verbose": false,
+    "watch": [
+      "webpack.config.js",
+      "server"
+    ],
+    "exec": "npm run start && npm run babel-node -- server/index.js"
+  }
+  
