@@ -3,17 +3,11 @@ import React, { Component } from 'react'
 // import Nav from './components/common/Navbar';
 
 export class App extends Component {
-
   render() {
-
-
     return (
-
-        <div>Test</div>
+      <div>Test</div>
     )
   }
-
-
 }
 
 export default App;

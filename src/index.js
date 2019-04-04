@@ -14,9 +14,9 @@ import { toHome, toLogin, toSignUp } from './routePaths'
 
 const sagaMiddleware = createSagaMiddleware()
 
-const createStoreWithMiddleware = applyMiddleware(sagaMiddleware)(createStore);
+const createStoreWithMiddleware = applyMiddleware(sagaMiddleware)(createStore)
 
-sagaMiddleware.run(sagas)
+// sagaMiddleware.run(sagas)
 
 ReactDOM.render(
   <MuiThemeProvider>
@@ -29,4 +29,7 @@ ReactDOM.render(
       </Router>
     </Provider>
   </MuiThemeProvider>
-  , document.getElementById('root'));
+  , document.getElementById('app'));
+
+
+// ReactDOM.render(<App />, document.getElementById("app"))
