@@ -4,6 +4,9 @@ const initialState = []
 
 export default function(state = initialState, action) {
     switch(action.type) {
-        case types.
+        case types.GET_DEALS.TRY:
+            return {}
+        default:
+        return state
     }
 }
