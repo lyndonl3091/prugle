@@ -21,6 +21,12 @@ module.exports = {
           }
       ]
     },
+    resolve: {
+      alias: {
+        utils: path.resolve(__dirname, 'utils'),
+        types: path.resolve(__dirname, 'src/actions/types')
+      }
+    },
     plugins: [
         new HtmlWebPackPlugin({
           template: "./index.html",

@@ -1,3 +1,5 @@
+import { createAsyncRequestTypes } from 'utils'
+
 export const GET_DEALS = 'GET_DEALS'
 
 export const SIGN_UP = 'SIGN_UP'
