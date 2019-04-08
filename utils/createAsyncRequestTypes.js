@@ -1,6 +1,6 @@
 const types = ['TRY', 'SUCCESS', 'FAILURE']
 
-export default function createAsynRequestTypes(val) {
+export default function(val) {
 	return types.reduce((acc, next) => {
   	acc = {
       	...acc,
