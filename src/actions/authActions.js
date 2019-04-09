@@ -19,9 +19,7 @@ export const signInUser = ({ email, password }) => {
     signIn(user)
       .then(res => {
         dispatch({ type: types.AUTH_USER})
-        // save JWT token to localStorage
         localStorage.setItem('token', res.data.token);
-        // redirect to home route
       })
       .catch((error) => {
         dispatch(authError(error));
