@@ -1,8 +1,8 @@
 import React from 'react'
-import Paper from 'material-ui/Paper'
+import Paper from '@material-ui/core/Paper'
+import { toSignUp } from 'src/routePaths'
 
 // import Button from '../common/Button';
-// import { toSignUp } from '../../routePaths';
 
 const pageStyle = {
   height: '100%',
@@ -15,7 +15,7 @@ const pageStyle = {
 const SplashPage = (props) => (
   <div>
     <Paper style={pageStyle} zDepth={5}>
-      <h4>What's your favor?</h4>
+      <h4>Prugle</h4>
       <Button
         route={toSignUp}
         label="Sign Up/Log In"
