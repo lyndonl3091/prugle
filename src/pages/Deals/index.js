@@ -1,0 +1,1 @@
+export ViewDeals from './ViewDeals'

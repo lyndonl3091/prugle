@@ -5,12 +5,13 @@ import { createStore, applyMiddleware } from 'redux'
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom"
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 import createSagaMiddleware from 'redux-saga'
-
-import App from './App'
-import SignUp from './components/auth/SignUp'
 import reducers from './reducers'
 import sagas from './sagas'
-import { toHome, toLogin, toSignUp } from './routePaths'
+import * as routes from './routePaths'
+
+// import SignUp from '/components/auth/SignUp'
+import { ViewDeals } from 'pages/Deals'
+import App from './App'
 
 const sagaMiddleware = createSagaMiddleware()
 
@@ -23,11 +24,12 @@ ReactDOM.render(
     <Provider store={createStoreWithMiddleware(reducers)}>
       <Router>
         <Switch>
-          <Route exact path={toHome} component={App} />
-          <Route path={toSignUp} component={SignUp} />
+          <Route exact path={routes.toHome} component={App} />
+          {/* <Route path={toSignUp} component={SignUp} /> */}
+          <Route path={routes.toDeals} component={ViewDeals} />
         </Switch>
       </Router>
-    </Provider>
+  </Provider>
   </MuiThemeProvider>
   , document.getElementById('app'));
 

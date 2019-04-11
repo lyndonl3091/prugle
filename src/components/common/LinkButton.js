@@ -2,12 +2,12 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import Button from '@material-ui/core/Button'
 
-const button = (props) => (
+const LinkButton = ({ label, route}) => (
 
-  <Link to={props.route}>
-    <Button label={props.label} />
+  <Link to={route}>
+    <Button>{label}</Button>
   </Link>
 
 )
 
-export default button;
+export default LinkButton;
