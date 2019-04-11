@@ -1,13 +1,13 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import RaisedButton from 'material-ui/core/RaisedButton'
+import Button from '@material-ui/core/Button'
 
-const Button = (props) => (
+const button = (props) => (
 
   <Link to={props.route}>
-    <RaisedButton label={props.label} />
+    <Button label={props.label} />
   </Link>
 
 )
 
-export default Button;
+export default button;

@@ -2,7 +2,7 @@ import React from 'react'
 import Paper from '@material-ui/core/Paper'
 import { toSignUp } from 'src/routePaths'
 
-// import Button from '../common/Button';
+import Button from 'components/common/button';
 
 const pageStyle = {
   height: '100%',
