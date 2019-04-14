@@ -4,7 +4,7 @@ const Schema = mongoose.Schema;
 const dealsSchema = new Schema({
   title: String,
   description: String,
-  datePosted: { type: Date, default: Date.now },
+  postedOn: { type: Date, default: Date.now },
 });
 
 

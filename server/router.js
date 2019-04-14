@@ -4,6 +4,8 @@ const passport = require('passport')
 const express = require('express')
 const path = require('path')
 
+const Deals = require('./controllers/deals')
+
 const requireAuth = passport.authenticate('jwt', { session: false })
 const requireSignin = passport.authenticate('local', { session: false })
 
@@ -18,5 +20,7 @@ module.exports = function(app) {
   app.post('/signin', requireSignin, Authentication.signin)
   app.post('/signup', Authentication.signup)
 
-  app.use('/api', require('./routes/api'))
+  app.use('/prugle', require('./routes/api'))
+
+  // app.post('/deals/add', Deals.add)
 }

@@ -10,7 +10,6 @@ function tokenForUser(user) {
 exports.signin = function(req, res, next) {
   const email = req.body.email;
 
-  // create condition to check if user exist
   User.findOne({email: email}, (err, user) => {
 
     if(user) {

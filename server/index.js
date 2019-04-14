@@ -8,21 +8,17 @@ const app = express();
 const router = require('./router');
 const mongoose = require('mongoose');
 
-// DB setup
 const mongoUrl = process.env.MONGODB_URI  || 'mongodb://localhost/prugle';
 
 mongoose.connect(mongoUrl, err => {
   console.log(err || `MongoDB connected to ${mongoUrl}`);
 })
 
-
-// App setup
 app.use(morgan('dev'));
 app.use(bodyParser.json({ type: '*/*' }));
 router(app);
 
 
-// Server setup
 const port = process.env.PORT || 3000;
 const server = http.createServer(app);
 server.listen(port);
