@@ -22,5 +22,4 @@ module.exports = function(app) {
 
   app.use('/prugle', require('./routes/api'))
 
-  // app.post('/deals/add', Deals.add)
 }

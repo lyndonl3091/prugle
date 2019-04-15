@@ -16,17 +16,22 @@ router.get('/', (req, res) => {
 })
 
 router.post('/add', (req, res) => {
-  // add deal
-  Deals.create(req.body, err => {
-    console.log('req:', req)
+  Deals.create(req.body, (err, deal) => {
+    console.log('REQ', req.body)
     if (err) {
-      console.log(err)
+      // console.log(err)
       return res.status(400).send(err)
     }
-    
-    return res.status(200).send('OK')
+
+    // return res.status(200).send('OK')
+    deal.save(err => {
+      if (err) {
+        return res.status(400).send(err)
+      }
+      return res.status(200).send('Saved!')
+    })
   })
-})  
+})
 
 
 
