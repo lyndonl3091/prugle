@@ -4,15 +4,15 @@ const passport = require('passport')
 const express = require('express')
 const path = require('path')
 
-const Deals = require('./controllers/deals')
-
 const requireAuth = passport.authenticate('jwt', { session: false })
 const requireSignin = passport.authenticate('local', { session: false })
 
 module.exports = function(app) {
 
   app.use(express.static('public'))
-
+  
+  app.use('/prugle', require('./routes/api'))
+  
   app.get('*', function(req, res) {
     res.sendFile(path.join(__dirname, '..', '/index.html'))
   });
@@ -20,6 +20,5 @@ module.exports = function(app) {
   app.post('/signin', requireSignin, Authentication.signin)
   app.post('/signup', Authentication.signup)
 
-  app.use('/prugle', require('./routes/api'))
 
 }
