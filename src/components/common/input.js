@@ -1,9 +1,9 @@
 import React, { Fragment } from 'react'
 
-const input = ({ label }) => (
+const Input = ({ label }) => (
     <Fragment>
         <label>{label}</label>
     </Fragment>
 )
 
-export default input
+export default Input

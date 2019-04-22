@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { Card, TextField } from '@material-ui/core'
 
+import { Card } from 'components/common'
+
 const mapStateToProps = state => {
     deals: state.deals
 }
