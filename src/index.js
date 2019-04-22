@@ -5,9 +5,13 @@ import { createStore, applyMiddleware } from 'redux'
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom"
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 import createSagaMiddleware from 'redux-saga'
-import reducers from './reducers'
+import rootReducer from './reducers'
 import sagas from './sagas'
 import * as routes from './routePaths'
+
+const initialState = Immutable.Map()
+
+const store = createStore(rootReducer, initialState)
 
 // import SignUp from '/components/auth/SignUp'
 import { ViewDeals } from 'pages/Deals'
@@ -15,7 +19,7 @@ import App from './App'
 
 const sagaMiddleware = createSagaMiddleware()
 
-const createStoreWithMiddleware = applyMiddleware(sagaMiddleware)(createStore)
+const createStoreWithMiddleware = applyMiddleware(sagaMiddleware)(store)
 
 // sagaMiddleware.run(sagas)
 
