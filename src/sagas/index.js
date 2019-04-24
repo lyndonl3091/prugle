@@ -18,6 +18,6 @@ export function* addDealsProcess(action) {
     // call api
 }
 
-export default function() {
+export default function*() {
     yield fork(addDealsListener)
 }

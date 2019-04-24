@@ -1,5 +1,5 @@
 import { fromJS } from 'immutable'
 
-export default initialState = fromJS({
+export default fromJS({
     deals: [],
 })

@@ -1,6 +1,6 @@
 import React from 'react'
 import {
-    Card,
+    Card as MuiCard,
     CardActionArea,
     CardActions,
     CardContent,
@@ -9,11 +9,11 @@ import {
 } from '@material-ui/core'
 
 export const Card = ({ title, description, image, route }) => (
-    <Card>
+    <MuiCard>
         <CardActionArea>
             <CardMedia image={image} title={title} />
         </CardActionArea>
-    </Card>
+    </MuiCard>
 )
 
 export default Card
