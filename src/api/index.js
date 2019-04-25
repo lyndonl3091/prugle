@@ -1,2 +1,2 @@
-export authApi from './authApi'
-export dealsApi from './dealsApi'
+export * from './authApi'
+export * from './dealsApi'
