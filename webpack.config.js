@@ -2,6 +2,7 @@ const HtmlWebPackPlugin = require("html-webpack-plugin")
 const path = require('path')
 
 module.exports = {
+    devtool: 'eval-source-map',
     module: {
       rules: [
         {

@@ -9,15 +9,12 @@ let router = express.Router()
 
 
 router.get('/', (req, res) => {
-  console.log('GOT HERE!')
   Deals.find({}, (err, deal) => {
-    console.log('TESTT HERE DEAL', deal)
     res.status(err ? 400 : 200).send(err || deal)
   })
 })
 
 router.post('/', (req, res) => {
-  console.log('HELLO WORLD')
   Deals.create(req.body, (err, deal) => {
     if (err) {
       return res.status(400).send(err)
