@@ -25,4 +25,4 @@ export class ViewDeals extends Component {
 }
 
 
-export default connect(mapStateToProps, mapDispatchToProps)(ViewDeals)
+export default connect(mapStateToProps, null)(ViewDeals)

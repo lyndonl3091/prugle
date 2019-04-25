@@ -1,7 +1,8 @@
 {
   "plugins": [
     "react-css-modules",
-    "@babel/plugin-proposal-export-default-from"
+    "@babel/plugin-proposal-export-default-from",
+    "@babel/transform-runtime"
   ],
   "presets": [
     "@babel/preset-react",

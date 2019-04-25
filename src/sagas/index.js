@@ -11,12 +11,12 @@ export function* addDealsListener() {
     console.log('test')
     const action = yield take(TYPES.ADD_DEALS.TRY)
 
-    yield fork(addDealsProcess)
+    // yield fork(addDealsProcess)
 }
 
-export function* addDealsProcess(action) {
-    // call api
-}
+// export function* addDealsProcess(action) {
+//     // call api
+// }
 
 export default function*() {
     yield fork(addDealsListener)

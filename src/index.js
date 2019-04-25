@@ -9,9 +9,14 @@ import rootReducer from './reducers'
 import sagas from './sagas'
 import * as routes from './routePaths'
 
-const initialState = Immutable.Map()
+// const initialState = Immutable.Map()
+const initialState = []
 
-const store = createStore(rootReducer, initialState)
+// const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose
+
+const store = createStore(rootReducer, initialState,
+  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+  )
 
 // import SignUp from '/components/auth/SignUp'
 import { ViewDeals } from 'pages/Deals'
