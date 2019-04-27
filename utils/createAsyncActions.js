@@ -1,16 +1,19 @@
-export default function(type) {
+const createAsyncActions = type => {
     return {
         try: args => ({
             payload: { ...args },
-        type: type.TRY
+            type: type.TRY
         }),
-        success: args => (){
+        success: args => ({
             payload: { ...args },
             type: type.SUCCESS
         }),
         failure: args => ({
             payload: { ...args },
-        type: type.FAILIRE
-        }
+            type: type.FAILIRE
+        })
     }
 }
+
+
+export default createAsyncActions
