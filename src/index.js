@@ -11,13 +11,15 @@ import sagas from './sagas'
 import * as routes from './routePaths'
 
 const initialState = Map()
-// const initialState = []
-
-// const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose
 
 const sagaMiddleware = createSagaMiddleware()
+
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose
 const createStoreWithMiddleware = applyMiddleware(sagaMiddleware)
-const store = createStore(rootReducer, initialState, createStoreWithMiddleware)
+
+const enhancer = composeEnhancers(createStoreWithMiddleware)
+
+const store = createStore(rootReducer, initialState, enhancer)
 
 // import SignUp from '/components/auth/SignUp'
 import { ViewDeals } from 'pages/Deals'
