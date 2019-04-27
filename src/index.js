@@ -10,6 +10,10 @@ import rootReducer from './reducers'
 import sagas from './sagas'
 import * as routes from './routePaths'
 
+import { ViewDeals } from 'pages/Deals'
+import App from './App'
+
+
 const initialState = Map()
 
 const sagaMiddleware = createSagaMiddleware()
@@ -21,11 +25,9 @@ const enhancer = composeEnhancers(createStoreWithMiddleware)
 
 const store = createStore(rootReducer, initialState, enhancer)
 
-// import SignUp from '/components/auth/SignUp'
-import { ViewDeals } from 'pages/Deals'
-import App from './App'
-
 sagaMiddleware.run(sagas)
+// import SignUp from '/components/auth/SignUp'
+
 
 ReactDOM.render(
   <MuiThemeProvider>

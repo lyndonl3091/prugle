@@ -9,12 +9,18 @@ const mapStateToProps = state => ({
     deals: state.deals
 })
 
+const mapDispatchToProps = dispatch => {
+    return {
+        getDeals: () =>  dispatch(actions.getDeals.try())
+    }
+}
+
 export class ViewDeals extends Component {
 
     componentDidMount() {
         // call api to get list of deals
-        const { getDeals } = actions
-        getDeals.try()
+        const { getDeals } = this.props
+        getDeals()
     }
 
     render() {
@@ -28,4 +34,4 @@ export class ViewDeals extends Component {
 }
 
 
-export default connect(mapStateToProps, actions)(ViewDeals)
+export default connect(mapStateToProps, mapDispatchToProps)(ViewDeals)
