@@ -11,9 +11,9 @@ export function* getDealsListener() {
     while (true) {
         const action = yield take(TYPES.GET_DEALS.TRY)
 
-        debugger
-
         const response = yield call(api.getDeals)
+
+        debugger
     }
 }
 
