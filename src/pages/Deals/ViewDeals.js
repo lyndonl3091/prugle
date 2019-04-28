@@ -1,12 +1,15 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
+import { get, getIn } from 'immutable'
 import * as actions from 'actions'
 // import { TextField } from '@material-ui/core'
 
 import { Card } from 'components/common'
 
 const mapStateToProps = state => ({
-    deals: state.deals
+    deals: state.getIn(['deals', 'listOfDeals']) &&
+        state.getIn(['deals', 'listOfDeals']).toJS() ?
+        state.getIn(['deals', 'listOfDeals']).toJS() : null
 })
 
 const mapDispatchToProps = dispatch => {
@@ -24,11 +27,19 @@ export class ViewDeals extends Component {
     }
 
     render() {
+        const { deals } = this.props
+
+        const listOfDeals = deals && deals.length ? deals.map(deal => (
+            <li>{deal.title}</li>
+        )) : <div>No Deals</div>
 
 
         return (
 
-            <div>List of Deals</div>
+            <div>
+                <h2>Deals</h2>
+                {listOfDeals}
+            </div>
         )
     }
 }

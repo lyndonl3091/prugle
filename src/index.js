@@ -14,7 +14,7 @@ import { ViewDeals } from 'pages/Deals'
 import App from './App'
 
 
-const initialState = Map()
+const initialState = Map({})
 
 const sagaMiddleware = createSagaMiddleware()
 
