@@ -1,10 +1,11 @@
 import {
     call,
     fork, 
-    take
+    take,
+    put
 } from 'redux-saga/effects'
 import * as api from 'api'
-
+import * as actions from 'actions'
 import * as TYPES from 'types'
 
 export function* getDealsListener() {
@@ -13,7 +14,10 @@ export function* getDealsListener() {
 
         const response = yield call(api.getDeals)
 
-        debugger
+        if (response && response.status && response.status === 200) {
+            const { data } = response
+            yield put(actions.getDeals.success({ deals: data }))
+        } 
     }
 }
 
