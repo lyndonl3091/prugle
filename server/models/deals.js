@@ -5,6 +5,7 @@ const dealsSchema = new Schema({
   title: String,
   description: String,
   postedOn: { type: Date, default: Date.now },
+  votes: Number
 });
 
 

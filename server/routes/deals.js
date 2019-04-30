@@ -29,6 +29,10 @@ router.post('/', (req, res) => {
   })
 })
 
+router.post('/upvote', (req, res) => {
+  // find and update
+})
+
 
 
 module.exports = router
