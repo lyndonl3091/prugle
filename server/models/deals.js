@@ -5,7 +5,9 @@ const dealsSchema = new Schema({
   title: String,
   description: String,
   postedOn: { type: Date, default: Date.now },
-  votes: Number
+  dateAdded: { type: Date, default: Date.now },
+  isExpired: { type: Boolean, default: false },
+  votes: { type: Number, default: 0 }
 });
 
 
