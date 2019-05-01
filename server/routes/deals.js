@@ -30,7 +30,7 @@ router.post('/', (req, res) => {
 })
 
 router.post('/upvote', (req, res) => {
-  isSecureContext.findById(req.body.id).exec((err, deal) => {
+  Deals.findById(req.body.id).exec((err, deal) => {
     if (err) return res.status(400).send(err)
 
     if (deal) {
@@ -45,7 +45,7 @@ router.post('/upvote', (req, res) => {
 })
 
 router.post('/downvote', (req, res) => {
-  isSecureContext.findById(req.body.id).exec((err, deal) => {
+  Deals.findById(req.body.id).exec((err, deal) => {
     if (err) return res.status(400).send(err)
 
     if (deal) {
