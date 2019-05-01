@@ -30,7 +30,18 @@ router.post('/', (req, res) => {
 })
 
 router.post('/upvote', (req, res) => {
-  // find and update
+  isSecureContext.findById(req.body.id).exec((err, deal) => {
+    if (err) return res.status(400).send(err)
+
+    if (deal) {
+      deal.votes += 1
+      dealsave((err, savedDeal) => {
+        if (err) return res.status(400).send(err)
+      })
+    } else {
+      return res.status(400).send('No deal found with that ID')
+    }
+  })
 })
 
 

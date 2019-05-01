@@ -9,7 +9,7 @@ import { Card } from 'components/common'
 const mapStateToProps = state => ({
     deals: state.getIn(['deals', 'listOfDeals']) &&
         state.getIn(['deals', 'listOfDeals']).toJS() ?
-        state.getIn(['deals', 'listOfDeals']).toJS() : null
+        state.getIn(['deals', 'listOfDeals']).toJS() : []
 })
 
 const mapDispatchToProps = dispatch => {
