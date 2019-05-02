@@ -30,7 +30,9 @@ export class ViewDeals extends Component {
         const { deals } = this.props
 
         const listOfDeals = deals && deals.length ? deals.map(deal => (
-            <li>{deal.title}</li>
+            <Card
+                title={deal.title}
+            />
         )) : <div>No Deals</div>
 
 
