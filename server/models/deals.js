@@ -7,7 +7,8 @@ const dealsSchema = new Schema({
   postedOn: { type: Date, default: Date.now },
   dateAdded: { type: Date, default: Date.now },
   isExpired: { type: Boolean, default: false },
-  votes: { type: Number, default: 0 }
+  votes: { type: Number, default: 0 },
+  rating: { type: Number, default: 0 }
 });
 
 
