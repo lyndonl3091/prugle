@@ -1,5 +1,6 @@
 import React, { Component, Fragment } from 'react'
 import { TextField, RaisedButton } from '@material-ui/core'
+import { addDeal } from 'actions'
 
 export class AddDeal extends component {
     constructor(props) {
@@ -7,7 +8,8 @@ export class AddDeal extends component {
 
         this.state = {
             title: '',
-            description: ''
+            description: '',
+            link: ''
         }
     }
     
@@ -22,6 +24,18 @@ export class AddDeal extends component {
             title: e.target.value
         })
     }
+    inputDescription = e => {
+        e.preventDefault()
+        this.setState({
+            description: e.target.value
+        })
+    }
+    inputLink = e => {
+        e.preventDefault()
+        this.setState({
+            link: e.target.value
+        })
+    }
 
     render() {
         <Fragment>
@@ -31,6 +45,18 @@ export class AddDeal extends component {
                 hintText="Title"
                 floatingLabelText="Title"
                 onChange={this.inputTitle}
+            />
+            <br/>
+            <TextField
+                hintText="Description"
+                floatingLabelText="Description"
+                onChange={this.inputDescript}
+            />
+            <br/>
+            <TextField
+                hintText="Link"
+                floatingLabelText="Link"
+                onChange={this.inputLink}
             />
             <br/>
             </form>
