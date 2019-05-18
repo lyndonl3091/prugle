@@ -5,6 +5,7 @@ import { createStore, applyMiddleware, compose } from 'redux'
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom"
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 import createSagaMiddleware from 'redux-saga'
+import logger from 'redux-logger'
 import { Map } from 'immutable'
 import rootReducer from './reducers'
 import sagas from './sagas'
@@ -19,7 +20,7 @@ const initialState = Map({})
 const sagaMiddleware = createSagaMiddleware()
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose
-const createStoreWithMiddleware = applyMiddleware(sagaMiddleware)
+const createStoreWithMiddleware = applyMiddleware(logger, sagaMiddleware)
 
 const enhancer = composeEnhancers(createStoreWithMiddleware)
 
