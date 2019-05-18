@@ -23,7 +23,7 @@ export function* getDealsListener() {
 
 export function* addDealsListener() {
     while (true) {
-        const action = yield take(TYPES.ADD_DEALS.TRY)
+        const action = yield take(TYPES.ADD_DEAL.TRY)
     
 
         // yield fork(addDealsProcess)
