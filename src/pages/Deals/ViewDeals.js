@@ -32,6 +32,7 @@ export class ViewDeals extends Component {
         const listOfDeals = deals && deals.length ? deals.map(deal => (
             <Card
                 title={deal.title}
+                description={deal.description}
             />
         )) : <div>No Deals</div>
 
