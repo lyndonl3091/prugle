@@ -17,9 +17,9 @@ const AppBar = () => (
             <MenuIcon />
           </IconButton>
           <Typography variant="h6">
-            News
+            Prugle
           </Typography>
-          <Button color="inherit">Login</Button>
+          <Button color="inherit">Home</Button>
         </Toolbar>
         </AppBar>
     </div>
