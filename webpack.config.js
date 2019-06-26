@@ -44,7 +44,7 @@ module.exports = {
         api: path.resolve(__dirname, 'src/api'),
         components: path.resolve(__dirname, 'src/components'),
         pages: path.resolve(__dirname, 'src/pages'),
-        utils: path.resolve(__dirname, 'utils'),
+        utils: path.resolve(__dirname, 'src/utils'),
         src: path.resolve(__dirname, 'src'),
         types: path.resolve(__dirname, 'src/actions/types')
       }
