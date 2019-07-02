@@ -43,7 +43,7 @@ module.exports = {
         actions: path.resolve(__dirname, 'src/actions'),
         api: path.resolve(__dirname, 'src/api'),
         components: path.resolve(__dirname, 'src/components'),
-        pages: path.resolve(__dirname, 'src/pages'),
+        views: path.resolve(__dirname, 'src/views'),
         utils: path.resolve(__dirname, 'src/utils'),
         src: path.resolve(__dirname, 'src'),
         styles: path.resolve(__dirname, 'src/styles'),
