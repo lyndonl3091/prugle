@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component, useState } from 'react'
 import { connect } from 'react-redux'
 import { get, getIn } from 'immutable'
 import * as actions from 'actions'
@@ -34,7 +34,7 @@ export class ViewDeals extends Component {
                 title={deal.title}
                 description={deal.description}
             />
-        )) : <div>No Deals</div>
+        )) : <div>No Deals Available</div>
 
 
         return (
@@ -48,4 +48,7 @@ export class ViewDeals extends Component {
 }
 
 
-export default connect(mapStateToProps, mapDispatchToProps)(ViewDeals)
+export default connect(
+    mapStateToProps,
+    mapDispatchToProps
+)(ViewDeals)
