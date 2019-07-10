@@ -1,3 +1,5 @@
+const types = ['TRY', 'SUCCESS', 'FAILURE']
+
 export const createAsyncActions = type => {
     return {
         try: args => ({
@@ -15,9 +17,7 @@ export const createAsyncActions = type => {
     }
 }
 
-const types = ['TRY', 'SUCCESS', 'FAILURE']
-
-export const createAsynRequestTypes = val => {
+export const createAsyncRequestTypes = val => {
 	return types.reduce((acc, next) => {
   	acc = {
       	...acc,

@@ -4,7 +4,7 @@ import { get, getIn } from 'immutable'
 import * as actions from 'actions'
 // import { TextField } from '@material-ui/core'
 
-import { Card } from 'components/common'
+import { Card } from 'components/common/Card'
 
 const mapStateToProps = state => ({
     deals: state.getIn(['deals', 'listOfDeals']) &&

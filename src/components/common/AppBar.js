@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 import {
     AppBar,
     Toolbar,
@@ -9,8 +9,8 @@ import {
 import MenuIcon from '@material-ui/icons/Menu'
 
 
-const AppBar = () => (
-    <Fragment>
+const Bar = () => (
+    <>
         <AppBar position="static">
         <Toolbar>
           <IconButton edge="start" color="inherit" aria-label="Menu">
@@ -22,7 +22,7 @@ const AppBar = () => (
           <Button color="inherit">Home</Button>
         </Toolbar>
         </AppBar>
-    </Fragment>
+    </>
 )
 
-export default AppBar
+export default Bar

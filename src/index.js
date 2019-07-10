@@ -11,7 +11,7 @@ import rootReducer from './reducers'
 import sagas from './sagas'
 import * as routes from './routePaths'
 
-import { ViewDeals } from 'pages/Deals'
+import { ViewDeals } from 'views/Deals'
 import App from './App'
 
 
