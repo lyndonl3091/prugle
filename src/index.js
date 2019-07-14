@@ -11,6 +11,8 @@ import rootReducer from './reducers'
 import sagas from './sagas'
 import * as routes from './routePaths'
 
+import AppBar from './components/common/AppBar'
+
 import { ViewDeals } from 'views/Deals'
 import App from './App'
 
@@ -33,6 +35,7 @@ sagaMiddleware.run(sagas)
 ReactDOM.render(
   <MuiThemeProvider>
     <Provider store={store}>
+      <AppBar />
       <Router>
         <Switch>
           <Route exact path={routes.toHome} component={App} />
