@@ -7,6 +7,7 @@ import {
     IconButton,
 } from '@material-ui/core'
 import MenuIcon from '@material-ui/icons/Menu'
+import LinkButton from 'components/common/LinkButton'
 
 
 const Bar = () => (
@@ -16,10 +17,9 @@ const Bar = () => (
           <IconButton edge="start" color="inherit" aria-label="Menu">
             <MenuIcon />
           </IconButton>
-          <Typography variant="h6">
-            Prugle
-          </Typography>
           <Button color="inherit">Home</Button>
+          <Button color="inherit">Deals</Button>
+          <Button color="inherit">Log In</Button>
         </Toolbar>
         </AppBar>
     </>

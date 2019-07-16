@@ -2,7 +2,7 @@ import React from 'react'
 import Paper from '@material-ui/core/Paper'
 import { toSignUp, toDeals } from 'src/routePaths'
 
-import LinkButton from 'components/common/LinkButton';
+import LinkButton from 'components/common/LinkButton'
 
 const pageStyle = {
   height: '100%',
