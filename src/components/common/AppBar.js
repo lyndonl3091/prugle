@@ -9,6 +9,8 @@ import {
 import MenuIcon from '@material-ui/icons/Menu'
 import LinkButton from 'components/common/LinkButton'
 
+import { toDeals } from 'src/routePaths'
+
 
 const Bar = () => (
     <>
@@ -18,7 +20,10 @@ const Bar = () => (
             <MenuIcon />
           </IconButton>
           <Button color="inherit">Home</Button>
-          <Button color="inherit">Deals</Button>
+          <LinkButton
+            route={toDeals}
+            label="Deals"
+          />
           <Button color="inherit">Log In</Button>
         </Toolbar>
         </AppBar>

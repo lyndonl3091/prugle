@@ -35,7 +35,6 @@ sagaMiddleware.run(sagas)
 ReactDOM.render(
   <MuiThemeProvider>
     <Provider store={store}>
-      <AppBar />
       <Router>
         <Switch>
           <Route exact path={routes.toHome} component={App} />
@@ -46,6 +45,3 @@ ReactDOM.render(
   </Provider>
   </MuiThemeProvider>
   , document.getElementById('app'));
-
-
-// ReactDOM.render(<App />, document.getElementById("app"))
