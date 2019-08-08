@@ -36,11 +36,14 @@ ReactDOM.render(
   <MuiThemeProvider>
     <Provider store={store}>
       <Router>
-        <Switch>
-          <Route exact path={routes.toHome} component={App} />
-          {/* <Route path={toSignUp} component={SignUp} /> */}
-          <Route path={routes.toDeals} component={ViewDeals} />
-        </Switch>
+        <div>
+          <AppBar />
+          <Switch>
+            <Route exact path={routes.toHome} component={App} />
+            {/* <Route path={toSignUp} component={SignUp} /> */}
+            <Route path={routes.toDeals} component={ViewDeals} />
+          </Switch>
+        </div>
       </Router>
   </Provider>
   </MuiThemeProvider>
