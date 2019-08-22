@@ -36,7 +36,7 @@ ReactDOM.render(
   <MuiThemeProvider>
     <Provider store={store}>
       <Router>
-        <div>
+        <div className="app">
           <AppBar />
           <Switch>
             <Route exact path={routes.toHome} component={App} />
