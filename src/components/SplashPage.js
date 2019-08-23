@@ -1,6 +1,7 @@
 import React from 'react'
 import Paper from '@material-ui/core/Paper'
 import { toSignUp, toDeals } from 'src/routePaths'
+import { SplashWrapper } from 'styles/common'
 
 import LinkButton from 'components/common/LinkButton'
 
@@ -13,7 +14,7 @@ const pageStyle = {
 };
 
 const SplashPage = props => (
-  <div>
+  <SplashWrapper>
     <Paper style={pageStyle}>
       <h4>Prugle</h4>
       <LinkButton
@@ -22,7 +23,7 @@ const SplashPage = props => (
         label="View Deals"
       />
     </Paper>
-  </div>
+  </SplashWrapper>
 )
 
 export default SplashPage;
