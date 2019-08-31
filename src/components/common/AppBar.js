@@ -9,7 +9,7 @@ import {
 import MenuIcon from '@material-ui/icons/Menu'
 import LinkButton from 'components/common/LinkButton'
 
-import { toDeals } from 'src/routePaths'
+import { toDeals, toHome } from 'src/routePaths'
 
 
 const Bar = () => (
@@ -19,7 +19,10 @@ const Bar = () => (
           <IconButton edge="start" color="inherit" aria-label="Menu">
             <MenuIcon />
           </IconButton>
-          <Button color="inherit">Home</Button>
+          <LinkButton
+            route={toHome}
+            label="Home"
+          />
           <LinkButton
             route={toDeals}
             label="Deals"

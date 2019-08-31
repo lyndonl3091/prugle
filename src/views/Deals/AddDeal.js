@@ -1,6 +1,12 @@
-import React, { Component, Fragment } from 'react'
+import React, { Component, Fragment, useState } from 'react'
 import { TextField, RaisedButton } from '@material-ui/core'
 import { addDeal } from 'actions'
+
+
+export const AddDeal = props => {
+    
+}
+
 
 export class AddDeal extends component {
     constructor(props) {
