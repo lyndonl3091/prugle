@@ -3,71 +3,55 @@ import { TextField, RaisedButton } from '@material-ui/core'
 import { addDeal } from 'actions'
 
 
-// export const AddDeal = props => {
-    
-// }
+export const AddDeal = props => {
+    const [title, setTitle] = useState('')
+    const [descriptio, setDescription] = useState('')
+    const [link, setLink] = useState('')
 
-
-export class AddDeal extends component {
-    constructor(props) {
-        super(props)
-
-        this.state = {
-            title: '',
-            description: '',
-            link: ''
-        }
-    }
-    
-    handleSubmit = e => {
-        e.preventDefault()
-        // dispatch add
+    function handleSubmit() {
+        console.log('submit')
     }
 
-    inputTitle = e => {
-        e.preventDefault()
-        this.setState({
-            title: e.target.value
-        })
-    }
-    inputDescription = e => {
-        e.preventDefault()
-        this.setState({
-            description: e.target.value
-        })
-    }
-    inputLink = e => {
-        e.preventDefault()
-        this.setState({
-            link: e.target.value
-        })
+    function inputTitle(e) {
+        const val = e.target.value
+        setTitle(val)
     }
 
-    render() {
-        <Fragment>
-            <form onSubmit={this.handleSubmit}>
+    function inputDescription(e) {
+        const val = e.target.value
+        setDescription(val)
+    }
+
+    function inputLink(e) {
+        const val = e.target.value
+        setLink(val)
+    }
+
+    return (
+        <>
+        <form onSubmit={this.handleSubmit}>
 
             <TextField
                 hintText="Title"
                 floatingLabelText="Title"
-                onChange={this.inputTitle}
+                onChange={inputTitle}
             />
             <br/>
             <TextField
                 hintText="Description"
                 floatingLabelText="Description"
-                onChange={this.inputDescript}
+                onChange={inputDescript}
             />
             <br/>
             <TextField
                 hintText="Link"
                 floatingLabelText="Link"
-                onChange={this.inputLink}
+                onChange={inputLink}
             />
-            <br/>
-            </form>
-        </Fragment>
-    }
+            <br/> 
+        </form>
+    </>
+    )
 }
 
 export default AddDeal
