@@ -29,23 +29,20 @@ export const AddDeal = props => {
 
     return (
         <>
-        <form onSubmit={this.handleSubmit}>
+        <form onSubmit={handleSubmit}>
 
             <TextField
-                hintText="Title"
-                floatingLabelText="Title"
+                label="Title"
                 onChange={inputTitle}
             />
             <br/>
             <TextField
-                hintText="Description"
-                floatingLabelText="Description"
-                onChange={inputDescript}
+                label="Description"
+                onChange={inputDescription}
             />
             <br/>
             <TextField
-                hintText="Link"
-                floatingLabelText="Link"
+                label="Link"
                 onChange={inputLink}
             />
             <br/> 

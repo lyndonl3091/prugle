@@ -13,7 +13,8 @@ import * as routes from './routePaths'
 
 import AppBar from './components/common/AppBar'
 
-import { ViewDeals } from 'views/Deals'
+import ViewDeals from 'views/Deals/ViewDeals'
+import AddDeal from 'views/Deals/AddDeal'
 import App from './App'
 
 
@@ -42,6 +43,7 @@ ReactDOM.render(
             <Route exact path={routes.toHome} component={App} />
             {/* <Route path={toSignUp} component={SignUp} /> */}
             <Route path={routes.toDeals} component={ViewDeals} />
+            <Route path={routes.toAdd} component={AddDeal} />
           </Switch>
         </div>
       </Router>
