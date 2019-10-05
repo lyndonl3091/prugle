@@ -3,9 +3,9 @@ import { TextField, RaisedButton } from '@material-ui/core'
 import { addDeal } from 'actions'
 
 
-export const AddDeal = props => {
+// export const AddDeal = props => {
     
-}
+// }
 
 
 export class AddDeal extends component {
@@ -69,3 +69,5 @@ export class AddDeal extends component {
         </Fragment>
     }
 }
+
+export default AddDeal
