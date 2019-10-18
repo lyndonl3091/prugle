@@ -1,15 +1,25 @@
 import React, { Component, Fragment, useState } from 'react'
+import { connect } from 'react-redux'
 import { TextField, RaisedButton } from '@material-ui/core'
 import { addDeal } from 'actions'
 
 
+const mapDispatchToProps = dispatch => ({
+    addDealActon: deal => dispatch(addDeal.try(deal))
+})
+
 export const AddDeal = props => {
     const [title, setTitle] = useState('')
-    const [descriptio, setDescription] = useState('')
+    const [description, setDescription] = useState('')
     const [link, setLink] = useState('')
 
     function handleSubmit() {
-        console.log('submit')
+        const { addDealAction } = props
+        addDealAction({
+           title,
+           description,
+           link
+        })
     }
 
     function inputTitle(e) {
@@ -45,10 +55,13 @@ export const AddDeal = props => {
                 label="Link"
                 onChange={inputLink}
             />
-            <br/> 
+            <br/>
         </form>
     </>
     )
 }
 
-export default AddDeal
+export default connect(
+    null,
+    mapDispatchToProps
+)(AddDeal)
