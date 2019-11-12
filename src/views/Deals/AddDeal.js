@@ -2,7 +2,7 @@ import React, { Component, Fragment, useState } from 'react'
 import { connect } from 'react-redux'
 import { TextField, RaisedButton } from '@material-ui/core'
 import { addDeal } from 'actions'
-import { Formik, Form, Field, ErrorMessage } from 'formik'
+import useForm from 'react-hook-form'
 
 
 const mapDispatchToProps = dispatch => ({
@@ -63,9 +63,20 @@ const mapDispatchToProps = dispatch => ({
 // }
 
 export const AddDeal = props => {
+    const { register, handleSubmit, watch, errors } = useForm()
+    
+    const onSubmit = data => {
+        console.log(data)
+    }
 
     return (
-        <div>Test</div>
+        <form onSubmit={handleSubmit(onSubmit)}>
+            <input name="title" defaultValue="" ref={register} />
+            <input name="description" defaultValue="" ref={register} />
+            <input name="link" defaultValue="" ref={register} />
+
+            <input type="submit" />
+        </form>
     )
 }
 
