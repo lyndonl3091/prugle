@@ -33,7 +33,8 @@ export function* addDealsListener() {
 
 export function* addDealsProcess(action) {
     
-    console.log('action: ', action)
+    const { request, error } = yield call(api.addDeal, {...action.payload})
+
 }
 
 export default function* rootSaga() {
