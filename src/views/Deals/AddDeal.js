@@ -6,67 +6,17 @@ import useForm from 'react-hook-form'
 
 
 const mapDispatchToProps = dispatch => ({
-    addDealActon: deal => dispatch(addDeal.try(deal))
+    addDealAction: deal => dispatch(addDeal.try(deal))
 })
 
-// export const AddDeal = props => {
-//     const [title, setTitle] = useState('')
-//     const [description, setDescription] = useState('')
-//     const [link, setLink] = useState('')
 
-//     function handleSubmit() {
-//         const { addDealAction } = props
-//         addDealAction({
-//            title,
-//            description,
-//            link
-//         })
-//     }
-
-//     function inputTitle(e) {
-//         const val = e.target.value
-//         setTitle(val)
-//     }
-
-//     function inputDescription(e) {
-//         const val = e.target.value
-//         setDescription(val)
-//     }
-
-//     function inputLink(e) {
-//         const val = e.target.value
-//         setLink(val)
-//     }
-
-//     return (
-//         <>
-//         <form onSubmit={handleSubmit}>
-
-//             <TextField
-//                 label="Title"
-//                 onChange={inputTitle}
-//             />
-//             <br/>
-//             <TextField
-//                 label="Description"
-//                 onChange={inputDescription}
-//             />
-//             <br/>
-//             <TextField
-//                 label="Link"
-//                 onChange={inputLink}
-//             />
-//             <br/>
-//         </form>
-//     </>
-//     )
-// }
-
-export const AddDeal = props => {
+export const AddDeal = ({ addDealAction }) => {
     const { register, handleSubmit, watch, errors } = useForm()
     
     const onSubmit = data => {
-        console.log(data)
+        if (addDealAction) {
+            addDealAction(data)
+        }
     }
 
     return (
@@ -82,5 +32,6 @@ export const AddDeal = props => {
 
 export default connect(
     null,
-    mapDispatchToProps
+    mapDispatchToProps,
+    null
 )(AddDeal)

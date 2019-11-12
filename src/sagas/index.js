@@ -26,14 +26,15 @@ export function* addDealsListener() {
         const action = yield take(TYPES.ADD_DEAL.TRY)
     
 
-        // yield fork(addDealsProcess)
+        yield fork(addDealsProcess, action)
     }
 
 }
 
-// export function* addDealsProcess(action) {
-//     // call api
-// }
+export function* addDealsProcess(action) {
+    
+    console.log('action: ', action)
+}
 
 export default function* rootSaga() {
     yield fork(getDealsListener)
