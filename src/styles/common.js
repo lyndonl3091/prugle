@@ -18,6 +18,11 @@ export const ColumnFlexWrapper = styled.div`
   align-items: center;
 `
 
+export const RowFlexWrapper = styled.div`
+  display: flex;
+  width: 100%;
+`
+
 export const FlexWrapper = styled.div`
   flex: 1;
   width: 100%;
