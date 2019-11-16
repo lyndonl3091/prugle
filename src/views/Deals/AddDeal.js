@@ -1,6 +1,6 @@
 import React, { Component, Fragment, useState } from 'react'
 import { connect } from 'react-redux'
-import { TextField, RaisedButton } from '@material-ui/core'
+import { TextField, Button } from '@material-ui/core'
 import { addDeal } from 'actions'
 import useForm from 'react-hook-form'
 
@@ -15,6 +15,7 @@ export const AddDeal = ({ addDealAction }) => {
     
     const onSubmit = data => {
         if (addDealAction) {
+            debugger
             addDealAction(data)
         }
     }
@@ -24,26 +25,32 @@ export const AddDeal = ({ addDealAction }) => {
             {/* <input name="title" defaultValue="" ref={register} /> */}
             <TextField
                 label="Title"
-                name="title"
-                defaultValue=""
-                ref={register}
+                inputProps={{
+                    name: 'title',
+                    defaultValue: "",
+                    ref: register
+                }}
             />
             <TextField
                 label="Description"
-                name="description"
-                defaultValue=""
-                ref={register}
+                inputProps={{
+                    name: 'description',
+                    defaultValue: "",
+                    ref: register
+                }}
             />
             <TextField
                 label="Link/URL"
-                name="link"
-                defaultValue=""
-                ref={register}
+                inputProps={{
+                    name: 'link',
+                    defaultValue: "",
+                    ref: register
+                }}
             />
             {/* <input name="description" defaultValue="" ref={register} />
             <input name="link" defaultValue="" ref={register} /> */}
 
-            <input type="submit" />
+            <Button type="submit">Submit</Button>
         </form>
     )
 }
