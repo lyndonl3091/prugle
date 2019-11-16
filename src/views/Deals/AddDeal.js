@@ -21,9 +21,27 @@ export const AddDeal = ({ addDealAction }) => {
 
     return (
         <form onSubmit={handleSubmit(onSubmit)}>
-            <input name="title" defaultValue="" ref={register} />
-            <input name="description" defaultValue="" ref={register} />
-            <input name="link" defaultValue="" ref={register} />
+            {/* <input name="title" defaultValue="" ref={register} /> */}
+            <TextField
+                label="Title"
+                name="title"
+                defaultValue=""
+                ref={register}
+            />
+            <TextField
+                label="Description"
+                name="description"
+                defaultValue=""
+                ref={register}
+            />
+            <TextField
+                label="Link/URL"
+                name="link"
+                defaultValue=""
+                ref={register}
+            />
+            {/* <input name="description" defaultValue="" ref={register} />
+            <input name="link" defaultValue="" ref={register} /> */}
 
             <input type="submit" />
         </form>
