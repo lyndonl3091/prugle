@@ -15,14 +15,14 @@ export const AddDeal = ({ addDealAction }) => {
     
     const onSubmit = data => {
         if (addDealAction) {
-            debugger
-            addDealAction(data)
+            if (data && DataTransfer.title) {
+                addDealAction(data)
+            }
         }
     }
 
     return (
         <form onSubmit={handleSubmit(onSubmit)}>
-            {/* <input name="title" defaultValue="" ref={register} /> */}
             <TextField
                 label="Title"
                 inputProps={{
@@ -47,9 +47,6 @@ export const AddDeal = ({ addDealAction }) => {
                     ref: register
                 }}
             />
-            {/* <input name="description" defaultValue="" ref={register} />
-            <input name="link" defaultValue="" ref={register} /> */}
-
             <Button type="submit">Submit</Button>
         </form>
     )

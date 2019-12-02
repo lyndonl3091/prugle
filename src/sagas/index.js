@@ -33,7 +33,14 @@ export function* addDealsListener() {
 
 export function* addDealsProcess(action) {
     
-    const { request, error } = yield call(api.addDeal, {...action.payload})
+    const { response, error } = yield call(api.addDeal, {...action.payload})
+
+    if (response) {
+        debugger
+        // notify deal has been added
+    } else {
+        // notify error
+    }
 
 }
 
