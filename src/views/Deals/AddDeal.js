@@ -3,19 +3,26 @@ import { connect } from 'react-redux'
 import { TextField, Button } from '@material-ui/core'
 import { addDeal } from 'actions'
 import useForm from 'react-hook-form'
+import * as yup from 'yup'
 
 
 const mapDispatchToProps = dispatch => ({
     addDealAction: deal => dispatch(addDeal.try(deal))
 })
 
+const AddSchema = yup.object().shape({
+    title: yup.string().required()
+})
+
 
 export const AddDeal = ({ addDealAction }) => {
-    const { register, handleSubmit, watch, errors } = useForm()
+    const { register, handleSubmit, watch, errors } = useForm({
+        validationSchema: AddSchema
+    })
     
     const onSubmit = data => {
         if (addDealAction) {
-            if (data && DataTransfer.title) {
+            if (data && data.title) {
                 addDealAction(data)
             }
         }
