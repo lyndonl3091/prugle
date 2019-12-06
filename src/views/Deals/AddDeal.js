@@ -5,6 +5,10 @@ import { addDeal } from 'actions'
 import useForm from 'react-hook-form'
 import * as yup from 'yup'
 
+import {
+    ColumnFlexWrapper
+} from 'styles/common'
+
 
 const mapDispatchToProps = dispatch => ({
     addDealAction: deal => dispatch(addDeal.try(deal))
@@ -30,31 +34,33 @@ export const AddDeal = ({ addDealAction }) => {
 
     return (
         <form onSubmit={handleSubmit(onSubmit)}>
-            <TextField
-                label="Title"
-                inputProps={{
-                    name: 'title',
-                    defaultValue: "",
-                    ref: register
-                }}
-            />
-            <TextField
-                label="Description"
-                inputProps={{
-                    name: 'description',
-                    defaultValue: "",
-                    ref: register
-                }}
-            />
-            <TextField
-                label="Link/URL"
-                inputProps={{
-                    name: 'link',
-                    defaultValue: "",
-                    ref: register
-                }}
-            />
-            <Button type="submit">Submit</Button>
+            <ColumnFlexWrapper>
+                <TextField
+                    label="Title"
+                    inputProps={{
+                        name: 'title',
+                        defaultValue: "",
+                        ref: register
+                    }}
+                />
+                <TextField
+                    label="Description"
+                    inputProps={{
+                        name: 'description',
+                        defaultValue: "",
+                        ref: register
+                    }}
+                />
+                <TextField
+                    label="Link/URL"
+                    inputProps={{
+                        name: 'link',
+                        defaultValue: "",
+                        ref: register
+                    }}
+                />
+                <Button type="submit">Submit</Button>
+            </ColumnFlexWrapper>
         </form>
     )
 }
