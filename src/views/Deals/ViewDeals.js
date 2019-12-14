@@ -1,7 +1,12 @@
 import React, { Component, useState } from 'react'
 import { connect } from 'react-redux'
 import { get, getIn } from 'immutable'
-import { ColumnFlexWrapper, RowFlexWrapper } from 'styles/common'
+import {
+    ColumnFlexWrapper,
+    Header,
+    RowFlexWrapper,
+    OuterWrapper
+} from 'styles/common'
 
 import * as actions from 'actions'
 // import { TextField } from '@material-ui/core'
@@ -40,11 +45,17 @@ export class ViewDeals extends Component {
 
 
         return (
+            <OuterWrapper>
+                <Header>
+                    Deals
+                </Header>
 
-            <RowFlexWrapper>
-                <h2>Deals</h2>
-                {listOfDeals}
-            </RowFlexWrapper>
+                <RowFlexWrapper>
+                    {listOfDeals}
+                </RowFlexWrapper>
+
+            </OuterWrapper>
+            
         )
     }
 }

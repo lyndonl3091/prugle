@@ -59,7 +59,13 @@ export const AddDeal = ({ addDealAction }) => {
                         ref: register
                     }}
                 />
-                <Button type="submit">Submit</Button>
+                <Button
+                    type="submit"
+                    variant="contained"
+                    color="primary"
+                >
+                    Submit
+                </Button>
             </ColumnFlexWrapper>
         </form>
     )

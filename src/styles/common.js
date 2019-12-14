@@ -27,3 +27,15 @@ export const FlexWrapper = styled.div`
   flex: 1;
   width: 100%;
 `
+
+export const OuterWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+`
+
+export const Header = styled.div`
+  flex: 1;
+`
