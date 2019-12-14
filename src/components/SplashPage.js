@@ -1,13 +1,16 @@
 import React from 'react'
 import Paper from '@material-ui/core/Paper'
 import { toAdd, toSignUp, toDeals } from 'src/routePaths'
-import { SplashWrapper } from 'styles/common'
+import {
+  SplashWrapper,
+  Header
+} from 'styles/common'
 
 import LinkButton from 'components/common/LinkButton'
 
 const pageStyle = {
   height: '100%',
-  width: '50%',
+  width: '100%',
   margin: 'auto',
   textAlign: 'center',
   padding: '10px',
