@@ -1,4 +1,4 @@
-import React, { Component, Fragment, useState } from 'react'
+import React from 'react'
 import { connect } from 'react-redux'
 import { TextField, Button } from '@material-ui/core'
 import { addDeal } from 'actions'

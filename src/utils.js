@@ -19,11 +19,7 @@ export const createAsyncActions = type => {
 
 export const createAsyncRequestTypes = val => {
 	return types.reduce((acc, next) => {
-  	acc = {
-      	...acc,
-        [next]: `${val}.${next}`
-      }
-      
+    acc = { ...acc, [next]: `${val}.${next}` }
     return acc
   }, {})
 }

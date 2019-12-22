@@ -16,9 +16,10 @@ const Bar = () => (
     <>
         <AppBar position="static">
         <Toolbar>
-          <IconButton edge="start" color="inherit" aria-label="Menu">
+          <h1>Prugle</h1>
+          {/* <IconButton edge="start" color="inherit" aria-label="Menu">
             <MenuIcon />
-          </IconButton>
+          </IconButton> */}
           <LinkButton
             route={toHome}
             label="Home"

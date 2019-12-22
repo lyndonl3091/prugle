@@ -19,7 +19,6 @@ const pageStyle = {
 const SplashPage = props => (
   <SplashWrapper>
     <Paper style={pageStyle}>
-      <h4>Prugle</h4>
       <LinkButton
         route={toDeals}
         // label="Sign Up/Log In"
