@@ -15,9 +15,7 @@ module.exports = {
         "ecmaVersion": 2018,
         "sourceType": "module"
     },
-    "plugins": [
-        "react"
-    ],
+    "plugins": ["redux-saga", "react", "jsx-a11y", "import", "react-hooks"],
     "rules": {
         "react/jsx-uses-react": "error",
         "react/jsx-uses-vars":
