@@ -14,9 +14,7 @@ import * as actions from 'actions'
 import { Card } from 'components/common/Card'
 
 const mapStateToProps = state => ({
-    deals: state.getIn(['deals', 'listOfDeals']) &&
-        state.getIn(['deals', 'listOfDeals']).toJS() ?
-        state.getIn(['deals', 'listOfDeals']).toJS() : []
+    deals: state.getIn(['deals', 'listOfDeals'])
 })
 
 const mapDispatchToProps = dispatch => {
@@ -36,7 +34,7 @@ export class ViewDeals extends Component {
     render() {
         const { deals } = this.props
 
-        const listOfDeals = deals && deals.length ? deals.map(deal => (
+        const listOfDeals = deals && deals.toJS ? deals.toJS().map(deal => (
             <Card
                 title={deal.title}
                 description={deal.description}
@@ -55,7 +53,7 @@ export class ViewDeals extends Component {
                 </RowFlexWrapper>
 
             </OuterWrapper>
-            
+
         )
     }
 }

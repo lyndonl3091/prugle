@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const Deal = props => (
+export const Deal = ({ title }) => (
   <div>Deal #1</div>
 )
 
