@@ -2,7 +2,7 @@ import React, { Component, useState } from 'react'
 import { connect } from 'react-redux'
 import { get, getIn } from 'immutable'
 import {
-    ColumnFlexWrapper,
+    // ColumnFlexWrapper,
     Header,
     RowFlexWrapper,
     OuterWrapper
