@@ -1,3 +1,5 @@
+import { getIn } from 'lodash'
+
 const types = ['TRY', 'SUCCESS', 'FAILURE']
 
 export const createAsyncActions = type => {
