@@ -1,4 +1,4 @@
-import { getIn } from 'lodash'
+import { toPath } from 'lodash'
 
 const types = ['TRY', 'SUCCESS', 'FAILURE']
 
@@ -24,4 +24,10 @@ export const createAsyncRequestTypes = val => {
     acc = { ...acc, [next]: `${val}.${next}` }
     return acc
   }, {})
+}
+
+export const getIn = (state, path) => {
+    const x = toPath(path)
+
+    return state.getIn(x)
 }

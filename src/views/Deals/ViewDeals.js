@@ -7,6 +7,7 @@ import {
     RowFlexWrapper,
     OuterWrapper
 } from 'styles/common'
+import { getIn } from 'utils'
 
 import * as actions from 'actions'
 // import { TextField } from '@material-ui/core'
@@ -14,7 +15,8 @@ import * as actions from 'actions'
 import { Card } from 'components/common/Card'
 
 const mapStateToProps = state => ({
-    deals: state.getIn(['deals', 'listOfDeals'])
+    // deals: state.getIn(['deals', 'listOfDeals'])
+    deals: getIn(state, 'deals.listOfDeals')
 })
 
 const mapDispatchToProps = dispatch => {

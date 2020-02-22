@@ -16,7 +16,9 @@ export default function(state = initialState, { type, payload}) {
             const { deals } = payload
             result = result.setIn(['listOfDeals'], fromJS(deals))
             return result
-        case types.ADD_
+        case types.ADD_DEAL:
+            let result = state
+            return result
         default:
         return state
     }
