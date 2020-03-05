@@ -1,4 +1,4 @@
-import { getIn } from 'lodash'
+import { toPath } from 'lodash'
 
 const types = ['TRY', 'SUCCESS', 'FAILURE']
 
