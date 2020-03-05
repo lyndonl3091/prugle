@@ -25,3 +25,9 @@ export const createAsyncRequestTypes = val => {
     return acc
   }, {})
 }
+
+export const getIn = (state, path) => {
+    const x = toPath(path)
+
+    return state.getIn(x)
+}
