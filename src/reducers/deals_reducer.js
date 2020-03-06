@@ -6,19 +6,17 @@ import initialState from './initialState'
 export default function(state = initialState, { type, payload}) {
     switch(type) {
         case types.GET_DEALS.REQUEST:
-            let result = state
-            return result
+            return state
         case types.GET_DEALS.FAILURE:
-            let result = state
-            return result
+            return state            
         case types.GET_DEALS.SUCCESS:
             let result = state
             const { deals } = payload
             result = result.setIn(['listOfDeals'], fromJS(deals))
             return result
-        case types.ADD_DEALS.SUCCESS:
-            let result = state
-            return result
+        case types.ADD_DEAL.SUCCESS:
+            return state
+            
         default:
         return state
     }
