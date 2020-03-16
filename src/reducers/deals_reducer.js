@@ -26,7 +26,10 @@ const behaviors = {
 }
 
 export default function(state = initialState, { type, payload }) {
-    return behaviors[type](state, payload)
+    if (behaviors[type]) {
+        return behaviors[type](state, payload)
+    }
+    return state
 }
 
 
