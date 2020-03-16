@@ -31,3 +31,9 @@ export const getIn = (state, path) => {
 
     return state.getIn(x)
 }
+
+export const setIn = (state, path, value) => {
+    const x = toPath(path)
+
+    return state.setIn(path, fromJS(value))
+}

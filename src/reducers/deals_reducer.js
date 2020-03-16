@@ -3,9 +3,12 @@ import { fromJS, setIn } from 'immutable'
 import initialState from './initialState'
 
 const behaviors = {
-    [CONSTANTS.GET_DEALS.REQUEST]: (state, payload) => {
-        return state
-    },
+    // [CONSTANTS.GET_DEALS.REQUEST]: (state, payload) => {
+    //     let result = 
+        
+    //     result = setIn(['isFetching'], true)
+    //     return result
+    // },
     [CONSTANTS.GET_DEALS.SUCCESS]: (state, payload) => {
         let result = state
         const { deals } = payload
@@ -13,6 +16,12 @@ const behaviors = {
         result = result.setIn(['listOfDeals'], fromJS(deals))
         
         return result
+    },
+    [CONSTANTS.ADD_DEAL.SUCCESS]: (state, payload) => {
+        let result = state
+        const { deal } = payload
+
+        return rest
     }
 }
 
