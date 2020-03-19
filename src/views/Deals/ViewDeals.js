@@ -46,10 +46,6 @@ export class ViewDeals extends Component {
 
         return (
             <OuterWrapper>
-                <Header>
-                    Deals
-                </Header>
-
                 <RowFlexWrapper>
                     {listOfDeals}
                 </RowFlexWrapper>

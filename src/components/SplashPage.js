@@ -5,7 +5,7 @@ import {
   SplashWrapper,
   Header
 } from 'styles/common'
-import ViewDeals from 'views/ViewDeals'
+import ViewDeals from 'views/Deals/ViewDeals'
 
 import LinkButton from 'components/common/LinkButton'
 
@@ -21,16 +21,9 @@ const SplashPage = props => (
   <SplashWrapper>
     <Paper style={pageStyle}>
       <LinkButton
-        route={toDeals}
-        // label="Sign Up/Log In"
-        label="View Deals"
-      />
-      <LinkButton
         route={toAdd}
-        // label="Sign Up/Log In"
         label="Add Deals"
       />
-
       <ViewDeals />
     </Paper>
   </SplashWrapper>
