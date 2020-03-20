@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { connect } from 'react-redux'
 import { TextField, Button } from '@material-ui/core'
 import { addDeal } from 'actions'
@@ -20,55 +20,57 @@ const AddSchema = yup.object().shape({
 
 
 export const AddDeal = ({ addDealAction }) => {
-    const { register, handleSubmit, watch, errors } = useForm({
-        validationSchema: AddSchema
-    })
-    
-    const onSubmit = data => {
-        if (addDealAction) {
-            if (data && data.title) {
-                addDealAction(data)
-            }
-        }
-    }
+    const 
 
-    return (
-        <form onSubmit={handleSubmit(onSubmit)}>
-            <ColumnFlexWrapper>
-                <TextField
-                    label="Title"
-                    inputProps={{
-                        name: 'title',
-                        defaultValue: "",
-                        ref: register
-                    }}
-                />
-                <TextField
-                    label="Description"
-                    inputProps={{
-                        name: 'description',
-                        defaultValue: "",
-                        ref: register
-                    }}
-                />
-                <TextField
-                    label="Link/URL"
-                    inputProps={{
-                        name: 'link',
-                        defaultValue: "",
-                        ref: register
-                    }}
-                />
-                <Button
-                    type="submit"
-                    variant="contained"
-                    color="primary"
-                >
-                    Submit
-                </Button>
-            </ColumnFlexWrapper>
-        </form>
-    )
+    // const { register, handleSubmit, watch, errors } = useForm({
+    //     validationSchema: AddSchema
+    // })
+    
+    // const onSubmit = data => {
+    //     if (addDealAction) {
+    //         if (data && data.title) {
+    //             addDealAction(data)
+    //         }
+    //     }
+    // }
+
+    // return (
+    //     <form onSubmit={handleSubmit(onSubmit)}>
+    //         <ColumnFlexWrapper>
+    //             <TextField
+    //                 label="Title"
+    //                 inputProps={{
+    //                     name: 'title',
+    //                     defaultValue: "",
+    //                     ref: register
+    //                 }}
+    //             />
+    //             <TextField
+    //                 label="Description"
+    //                 inputProps={{
+    //                     name: 'description',
+    //                     defaultValue: "",
+    //                     ref: register
+    //                 }}
+    //             />
+    //             <TextField
+    //                 label="Link/URL"
+    //                 inputProps={{
+    //                     name: 'link',
+    //                     defaultValue: "",
+    //                     ref: register
+    //                 }}
+    //             />
+    //             <Button
+    //                 type="submit"
+    //                 variant="contained"
+    //                 color="primary"
+    //             >
+    //                 Submit
+    //             </Button>
+    //         </ColumnFlexWrapper>
+    //     </form>
+    // )
 }
 
 export default connect(

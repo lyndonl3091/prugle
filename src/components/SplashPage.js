@@ -1,6 +1,6 @@
 import React from 'react'
 import Paper from '@material-ui/core/Paper'
-import { toAdd, toSignUp, toDeals } from 'src/routePaths'
+// import { toAdd, toSignUp, toDeals } from 'src/routePaths'
 import {
   SplashWrapper,
   Header
@@ -20,10 +20,10 @@ const pageStyle = {
 const SplashPage = props => (
   <SplashWrapper>
     <Paper style={pageStyle}>
-      <LinkButton
-        route={toAdd}
+      {/* <LinkButton
+        // route={toAdd}
         label="Add Deals"
-      />
+      /> */}
       <ViewDeals />
     </Paper>
   </SplashWrapper>
