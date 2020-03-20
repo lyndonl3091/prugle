@@ -6,8 +6,9 @@ import {
   Header
 } from 'styles/common'
 import ViewDeals from 'views/Deals/ViewDeals'
+import AddDeal from 'views/Deals/AddDeal'
 
-import LinkButton from 'components/common/LinkButton'
+// import LinkButton from 'components/common/LinkButton'
 
 const pageStyle = {
   height: '100%',
@@ -20,10 +21,7 @@ const pageStyle = {
 const SplashPage = props => (
   <SplashWrapper>
     <Paper style={pageStyle}>
-      {/* <LinkButton
-        // route={toAdd}
-        label="Add Deals"
-      /> */}
+      <AddDeal />
       <ViewDeals />
     </Paper>
   </SplashWrapper>

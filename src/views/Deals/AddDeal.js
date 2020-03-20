@@ -20,7 +20,11 @@ const AddSchema = yup.object().shape({
 
 
 export const AddDeal = ({ addDealAction }) => {
-    const 
+    const [open, setOpen] = useState(false)
+
+    const handleOpenModal = () => setOpen(true)
+
+    const handleCloseModal = () => setOpen(false)
 
     // const { register, handleSubmit, watch, errors } = useForm({
     //     validationSchema: AddSchema
