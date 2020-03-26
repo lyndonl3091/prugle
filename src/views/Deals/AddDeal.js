@@ -9,14 +9,7 @@ import {
     ColumnFlexWrapper
 } from 'styles/common'
 
-
-const mapDispatchToProps = dispatch => ({
-    addDealAction: deal => dispatch(addDeal.try(deal))
-})
-
-const AddSchema = yup.object().shape({
-    title: yup.string().required()
-})
+import Form from './components/AddDealForm'
 
 
 export const AddDeal = ({ addDealAction }) => {
@@ -25,6 +18,8 @@ export const AddDeal = ({ addDealAction }) => {
     const handleOpenModal = () => setOpen(true)
 
     const handleCloseModal = () => setOpen(false)
+
+
 
     // const { register, handleSubmit, watch, errors } = useForm({
     //     validationSchema: AddSchema
@@ -77,8 +72,10 @@ export const AddDeal = ({ addDealAction }) => {
     // )
 }
 
-export default connect(
-    null,
-    mapDispatchToProps,
-    null
-)(AddDeal)
+// export default connect(
+//     null,
+//     // mapDispatchToProps,
+//     null
+// )(AddDeal)
+
+export default AddDeal
